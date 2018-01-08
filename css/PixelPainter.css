@@ -23,11 +23,15 @@ button:hover {
     margin: auto;
 }
 
-#rightColumn {
-    text-align: center;
-    margin: auto;
+#mainTable {
     width: 550px;
     height: 550px;
+}
+
+#rightColumn {
+    margin: auto;
+    width: 560px;
+    height: 560px;
     background-size: contain;
     background-repeat: no-repeat;
 }
