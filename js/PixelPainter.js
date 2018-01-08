@@ -10,7 +10,7 @@ function mainColumnsAndRows(x, y){
     for(var i = 0; i < x; i++){
         document.getElementById('mainTable').appendChild(makeElem('tr', 'row' + i, null));
         for(var h = 0; h < y; h++){
-            document.getElementById('row' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, h));
+            document.getElementById('row' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, "."));
         }
     }
 }
@@ -20,7 +20,7 @@ function leftColumnsAndRows(x, y){
     for(var i = 0; i < x; i++){
         document.getElementById('colorPicker').appendChild(makeElem('tr', 'roww' + i, null));
         for(var h = 0; h < y; h++){
-            document.getElementById('roww' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, h));
+            document.getElementById('roww' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, "X"));
         }
     }
 }
@@ -29,12 +29,12 @@ document.getElementById('pixelPainter').appendChild(makeElem('div', 'leftColumn'
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
 
 leftColumnsAndRows(10,5);
-
+document.getElementById('leftColumn').appendChild(makeElem('div', 'selectedColor', 'COLOR'));
 document.getElementById('leftColumn').appendChild(makeElem('button', 'erase', 'Erase'));
 document.getElementById('leftColumn').appendChild(makeElem('button', 'clear', 'Clear'));
 
 
-mainColumnsAndRows(10,20);
+mainColumnsAndRows(50  ,50);
 function makePicture(elem, label, source){
     var container = document.createElement(elem);
     container.id = label;
