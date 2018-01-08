@@ -41,4 +41,5 @@ function makePicture(elem, label, source){
     container.src = source;
     return container;
 }
-document.querySelector("body").appendChild(makePicture('img', 'mainPic', '../dinosaur.jpg'))
+// document.querySelector('body').appendChild(makePicture('img', 'mainPic', '../dinosaur.jpg'));
+document.getElementById('rightColumn').style.backgroundImage = "url('dinosaur.jpg')";
