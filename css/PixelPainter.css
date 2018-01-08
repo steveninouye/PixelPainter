@@ -24,16 +24,23 @@ button:hover {
 }
 
 #mainTable {
-    width: 550px;
-    height: 550px;
+    /* margin: auto; */
+    width: 540px;
+    height: 545px;
+    margin-left: 5px;
+}
+
+#middleColumn {
+    margin: auto; 
+    width: 565px;
+    height: 565px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #rightColumn {
-    margin: auto;
-    width: 560px;
-    height: 560px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    float: right;
+    border: 1px solid black;
 }
 
 #erase, #clear {

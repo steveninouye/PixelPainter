@@ -34,7 +34,7 @@ function makePicture(elem, label, source){
 
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'leftColumn', ''));
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'middleColumn', ''));
-document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
+document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', 'HELLO'));
 
 leftColumnsAndRows(10,5);
 document.getElementById('leftColumn').appendChild(makeElem('div', 'selectedColor', 'COLOR'));
@@ -42,7 +42,7 @@ document.getElementById('leftColumn').appendChild(makeElem('button', 'erase', 'E
 document.getElementById('leftColumn').appendChild(makeElem('button', 'clear', 'Clear'));
 
 
-mainColumnsAndRows(500,500);
+mainColumnsAndRows(25,40);
 
 // document.querySelector('body').appendChild(makePicture('img', 'mainPic', '../dinosaur.jpg'));
 document.getElementById('middleColumn').style.backgroundImage = "url('dinosaur.jpg')";
