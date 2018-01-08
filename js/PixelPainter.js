@@ -6,11 +6,11 @@ function makeElem(elem, label, inside){
 }
 
 function mainColumnsAndRows(x, y){
-    document.getElementById('rightColumn').appendChild(makeElem('table', 'mainTable', ''));
+    document.getElementById('middleColumn').appendChild(makeElem('table', 'mainTable', ''));
     for(var i = 0; i < x; i++){
         document.getElementById('mainTable').appendChild(makeElem('tr', 'row' + i, null));
         for(var h = 0; h < y; h++){
-            document.getElementById('row' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, "."));
+            document.getElementById('row' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, ""));
         }
     }
 }
@@ -26,6 +26,7 @@ function leftColumnsAndRows(x, y){
 }
 
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'leftColumn', ''));
+document.getElementById('pixelPainter').appendChild(makeElem('div', 'middleColumn', ''));
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
 
 leftColumnsAndRows(10,5);
@@ -34,7 +35,7 @@ document.getElementById('leftColumn').appendChild(makeElem('button', 'erase', 'E
 document.getElementById('leftColumn').appendChild(makeElem('button', 'clear', 'Clear'));
 
 
-mainColumnsAndRows(50  ,50);
+mainColumnsAndRows(200  ,200);
 function makePicture(elem, label, source){
     var container = document.createElement(elem);
     container.id = label;
@@ -42,4 +43,4 @@ function makePicture(elem, label, source){
     return container;
 }
 // document.querySelector('body').appendChild(makePicture('img', 'mainPic', '../dinosaur.jpg'));
-document.getElementById('rightColumn').style.backgroundImage = "url('dinosaur.jpg')";
+document.getElementById('middleColumn').style.backgroundImage = "url('dinosaur.jpg')";
