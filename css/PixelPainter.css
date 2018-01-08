@@ -20,18 +20,21 @@ button:hover {
 
 #leftColumn {
     float: left;
-    margin: auto;
+    /* margin: auto; */
+    position: fixed;
 }
 
 #mainTable {
     /* margin: auto; */
-    width: 540px;
-    height: 545px;
-    margin-left: 5px;
+    text-align: center;
+    width: 543px;
+    height: 560px;
+    margin: 0px;
 }
 
 #middleColumn {
-    margin: auto; 
+    margin-left: 400px;
+    position: absolute;
     width: 565px;
     height: 565px;
     background-size: contain;
@@ -40,6 +43,8 @@ button:hover {
 
 #rightColumn {
     float: right;
+    /* margin: auto; */
+    position: relative;
     border: 1px solid black;
 }
 
