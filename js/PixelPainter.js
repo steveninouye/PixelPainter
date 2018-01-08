@@ -10,7 +10,7 @@ function mainColumnsAndRows(x, y){
     for(var i = 0; i < x; i++){
         document.getElementById('mainTable').appendChild(makeElem('tr', 'row' + i, null));
         for(var h = 0; h < y; h++){
-            document.getElementById('row' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, ""));
+            document.getElementById('row' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, "."));
         }
     }
 }
@@ -25,6 +25,13 @@ function leftColumnsAndRows(x, y){
     }
 }
 
+function makePicture(elem, label, source){
+    var container = document.createElement(elem);
+    container.id = label;
+    container.src = source;
+    return container;
+}
+
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'leftColumn', ''));
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'middleColumn', ''));
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
@@ -35,12 +42,7 @@ document.getElementById('leftColumn').appendChild(makeElem('button', 'erase', 'E
 document.getElementById('leftColumn').appendChild(makeElem('button', 'clear', 'Clear'));
 
 
-mainColumnsAndRows(200  ,200);
-function makePicture(elem, label, source){
-    var container = document.createElement(elem);
-    container.id = label;
-    container.src = source;
-    return container;
-}
+mainColumnsAndRows(500,500);
+
 // document.querySelector('body').appendChild(makePicture('img', 'mainPic', '../dinosaur.jpg'));
 document.getElementById('middleColumn').style.backgroundImage = "url('dinosaur.jpg')";
