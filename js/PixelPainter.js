@@ -50,29 +50,16 @@ document.getElementById('middleColumn').style.backgroundImage = "url('dinosaur.j
 
 //CLICK FUNCTION//
 var middleTable = document.getElementById('mainTable');
-if (middleTable != null) {
-    for (var i = 0; i < middleTable.rows.length; i++) {
-        for (var j = 0; j < middleTable.rows[i].cells.length; j++)
-        middleTable.rows[i].cells[j].onclick = function() {
-            tableText(this);
+var cells = middleTable.getElementsByTagName('td'); 
+    for (var i = 0; i < cells.length; i++) { 
+        cells[i].onclick = function(){
+            console.log('color placed!');
         };
     }
-}
-
-function tableText(tableCell) {
-   console.log ('color placed!');
-}
-
 var leftTable = document.getElementById('colorPicker');
-if (leftTable != null) {
-    for (var i = 0; i < leftTable.rows.length; i++) {
-        for (var j = 0; j < leftTable.rows[i].cells.length; j++)
-        leftTable.rows[i].cells[j].onclick = function() {
-            tableTextTwo(this);
+var cellsTwo = leftTable.getElementsByTagName('td'); 
+    for (var i = 0; i < cellsTwo.length; i++) { 
+        cellsTwo[i].onclick = function(){
+            console.log('color picked!');
         };
-    }
-}
-
-function tableTextTwo(tableCellTwo) {
-    console.log ('color picked!');
-}
+    }    
