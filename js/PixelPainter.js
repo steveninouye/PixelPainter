@@ -113,10 +113,26 @@ for (var i = 0; i < cellsTwo.length; i++) {
 let cells = document.getElementById('mainTable').getElementsByTagName('td'); 
 //loops through all of the cells
 for (var h = 0; h < cells.length; h++) { 
-//sets an onclick function to each cell
-    cells[h].onclick = function(){
+//sets an ononmousedown function to each cell
+    cells[h].onmousedown = function(){
 //sets the background color to the same color that was picked
         this.style.backgroundColor = colorPicked;
+//loops through all the cells
+        for(var u = 0; u < cells.length; u++){
+//sets onmouseover function to all the cells
+            cells[u].onmouseover = function(){
+//sets the backgroundColor to the colorPicked
+                this.style.backgroundColor = colorPicked;
+            }
+//sets onmouseup function to all cells
+            cells[u].onmouseup = function(){
+//selects all cells
+                for(var s = 0; s < cells.length; s ++){
+//resets onmouseover function to nothing
+                    cells[s].onmouseover = '';
+                };
+            };
+        }
     };
 }
 

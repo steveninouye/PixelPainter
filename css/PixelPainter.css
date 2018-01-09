@@ -1,3 +1,7 @@
+body {
+    user-select: none;
+    -moz-user-select: none;
+}
 h1 {
     color: maroon;
     text-align: center;
