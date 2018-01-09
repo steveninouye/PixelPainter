@@ -148,9 +148,6 @@ for (var t = 0; t < images.length; t++){
     };
 }
 
-for(var i = 0; i < cellColors.length; i++) {
-    cellColors[i].style.backgroundColor = '#' + colors[Math.floor(Math.random() * colors.length)];
-}
 //sets an onclick function to the erase button
 document.getElementById('erase').onclick = function(){
 //changes the colorPicked to nothing
