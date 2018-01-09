@@ -42,7 +42,8 @@ function makePicture(elem, label, source){
 
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'leftColumn', ''));
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'middleColumn', ''));
-document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
+document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', 'PICK A PICTURE'));
+>>>>>>> ec4f933af6638a0d3b15d7e12d35e125749ee637
 
 colorPickerColumnsAndRows(10,14);
 document.getElementById('leftColumn').appendChild(makeElem('div', 'selectedColor', 'COLOR'));
@@ -50,32 +51,32 @@ document.getElementById('leftColumn').appendChild(makeElem('button', 'erase', 'E
 document.getElementById('leftColumn').appendChild(makeElem('button', 'clear', 'Clear'));
 
 
-mainColumnsAndRows(100,100);
+mainColumnsAndRows(25,25);
+>>>>>>> ec4f933af6638a0d3b15d7e12d35e125749ee637
 
 // document.querySelector('body').appendChild(makePicture('img', 'mainPic', '../dinosaur.jpg'));
 document.getElementById('middleColumn').style.backgroundImage = "url('dinosaur.jpg')";
 
-var can=document.getElementById("myCanvas")
-ctx=can.getContext("2d")
-img=new Image;
-img.onload=function(){
-    can.width=img.naturalWidth;
-    can.height=img.naturalHeight;
-    ctx.drawImage(img,0,0)};
-img.src="spectrum_chart.jpg";
-function rgbToHex(a,c,b){
-    if(255<a||255<c||255<b)
-        throw"Invalid color component";
-    return(a<<16|c<<8|b).toString(16)
-}
+//CLICK FUNCTION//
+let middleTable = document.getElementById('mainTable');
+let cells = middleTable.getElementsByTagName('td'); 
+    for (var i = 0; i < cells.length; i++) { 
+        cells[i].onclick = function(){
+            console.log('color placed!');
+        };
+    }
+let leftTable = document.getElementById('colorPicker');
+let cellsTwo = leftTable.getElementsByTagName('td'); 
+    for (var i = 0; i < cellsTwo.length; i++) { 
+        cellsTwo[i].onclick = function(){
+            console.log('color picked!');
+        };
+    }
+    
+//RANDOM COLORS TEST//
+var cellColors = leftTable.getElementsByTagName('td'),
+    colors = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0'];
 
-function GetPixel(a,c){
-    var b=can.clientWidth/can.width;
-    b=ctx.getImageData(a/b,c/b,1,1).data;
-    return"#"+("000000"+rgbToHex(b[0],b[1],b[2])).slice(-6).toUpperCase()}
-function getMousePos(a,c){var b=a.getBoundingClientRect();return{x:c.clientX-b.left,y:c.clientY-b.top}}can.onclick=function(a){mousePos=getMousePos(can,a);a=GetPixel(mousePos.x,mousePos.y);document.getElementById("pixcolor").value=a;document.getElementById("cccolor").style.backgroundColor=a};
-var cpcanvas=document.getElementById("cpcanvas"),
-cpctx=cpcanvas.getContext("2d"),
-hue=0,cpcolor=document.getElementById("cpcolor");drawCP(cpctx,hue);
-function drawCP(a,c){var b=a.createLinearGradient(0,0,a.canvas.width,0);b.addColorStop(0,"#fff");b.addColorStop(1,"hsl("+c+", 100%, 50%)");a.fillStyle=b;a.fillRect(0,0,a.canvas.width,a.canvas.height);b=a.createLinearGradient(0,0,0,a.canvas.height);b.addColorStop(0,"rgba(0,0,0,0)");b.addColorStop(1,"#000");a.fillStyle=b;a.fillRect(0,0,a.canvas.width,a.canvas.height)}
-function CPGetPixel(a,c){var b=can.clientWidth/can.width;b=cpctx.getImageData(a/b,c/b,1,1).data;return"#"+("000000"+rgbToHex(b[0],b[1],b[2])).slice(-6).toUpperCase()}HUE.onchange=function(){drawCP(cpctx,this.value)};cpcanvas.onclick=function(a){mousePos=getMousePos(cpcanvas,a);a=CPGetPixel(mousePos.x,mousePos.y);document.getElementById("cppixcolor").value=a;cpcolor.style.backgroundColor=a};
+for(var i = 0; i < cellColors.length; i++) {
+    cellColors[i].style.backgroundColor = '#' + colors[Math.floor(Math.random() * colors.length)];
+}
