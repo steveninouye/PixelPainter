@@ -42,7 +42,7 @@ function colorPickerRowsAndColumns(x, y){
 //for loop to create as many columns as 'y' insdie of each row
         for(var h = 0; h < y; h++){
 ////adds cells into the row
-            document.getElementById('roww' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, "."))
+            document.getElementById('roww' + i).appendChild(makeElem('td', 'r' + i + 'c' + h, ""));
         }
     }
 //gets all the cells and stores it into the colorCell variable
