@@ -1,6 +1,6 @@
 h1 {
     color: maroon;
-    text-align: center;
+    text-align: left;
     font-size: 60px;
     font-family: monospace;
     font-variant: small-caps;
@@ -9,7 +9,11 @@ h1 {
 }
 
 html {
-    background-color: powderblue;
+    background-color: #a7d5d5;
+    background-image: url('../easeldraw.jpg');
+    background-size: 1080px 780px;
+    background-repeat: no-repeat;
+    background-position: 40% 0%;
 }
 
 button:hover {
@@ -20,30 +24,41 @@ button:hover {
 
 #leftColumn {
     float: left;
-    /* margin: auto; */
     position: fixed;
 }
 
-#mainTable {
-    /* margin: auto; */
+#colorPicker {
     text-align: center;
-    width: 543px;
-    height: 560px;
-    margin: 0px;
+    border-collapse: collapse;
+    width: 200px;
+    height: 250px;
+}
+
+td {
+    border: 1px solid black;
+}
+
+#selectedColor {
+    margin-top: 20px;
+}
+
+#mainTable {
+    width: 540px;
+    height: 562px;
+    border-collapse: collapse;
 }
 
 #middleColumn {
-    margin-left: 400px;
+    margin-left: 415px;
     position: absolute;
-    width: 565px;
-    height: 565px;
+    width: 540px;
+    height: 562px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #rightColumn {
     float: right;
-    /* margin: auto; */
     position: relative;
     border: 1px solid black;
 }
@@ -59,11 +74,11 @@ button:hover {
 }
 
 #erase {
-     margin-top: 250px;
+     margin-top: 200px;
      background-color: rgb(0, 121, 186);
 }
 
 #clear {
-    margin-top: 295px;
+    margin-top: 245px;
     background-color: firebrick;
 }
