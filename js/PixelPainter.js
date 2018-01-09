@@ -49,17 +49,25 @@ document.getElementById('middleColumn').style.backgroundImage = "url('dinosaur.j
 
 
 //CLICK FUNCTION//
-var middleTable = document.getElementById('mainTable');
-var cells = middleTable.getElementsByTagName('td'); 
+let middleTable = document.getElementById('mainTable');
+let cells = middleTable.getElementsByTagName('td'); 
     for (var i = 0; i < cells.length; i++) { 
         cells[i].onclick = function(){
             console.log('color placed!');
         };
     }
-var leftTable = document.getElementById('colorPicker');
-var cellsTwo = leftTable.getElementsByTagName('td'); 
+let leftTable = document.getElementById('colorPicker');
+let cellsTwo = leftTable.getElementsByTagName('td'); 
     for (var i = 0; i < cellsTwo.length; i++) { 
         cellsTwo[i].onclick = function(){
             console.log('color picked!');
         };
-    }    
+    }
+    
+//RANDOM COLORS TEST//
+var cellColors = leftTable.getElementsByTagName('td'),
+    colors = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0'];
+
+for(var i = 0; i < cellColors.length; i++) {
+    cellColors[i].style.backgroundColor = '#' + colors[Math.floor(Math.random() * colors.length)];
+}
