@@ -26,7 +26,7 @@ function mainRowsAndColumns(x, y){
 //for loop to create as many columns as 'y' inside of each row
         for(var h = 0; h < y; h++){
 //adds cells into the row
-            document.getElementById('row' + i).appendChild(makeElem('td', 'main_r' + i + 'c' + h, "."));
+            document.getElementById('row' + i).appendChild(makeElem('td', 'main_r' + i + 'c' + h, " "));
         }
     }
 }
