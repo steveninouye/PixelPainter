@@ -56,18 +56,24 @@ td {
 }
 
 #mainTable {
-    width: 540px;
-    height: 562px;
+    width: 542px;
+    height: 552px;
     border-collapse: collapse;
     cursor: pointer;
+    position: relative;
 }
 
 #middleColumn {
-    margin-left: 415px;
-    position: fixed;
+    margin-left: 413px;
+    position: absolute;
     width: 540px;
-    height: 562px;
+    height: 552px;
+    opacity: 0.6;
     background-size: contain;
+    -ms-background-size: contain;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
     background-repeat: no-repeat;
 }
 
