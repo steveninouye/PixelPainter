@@ -20,20 +20,32 @@ button:hover {
 
 #leftColumn {
     float: left;
-    margin: auto;
+    /* margin: auto; */
+    position: fixed;
 }
 
 #mainTable {
-    width: 550px;
-    height: 550px;
+    /* margin: auto; */
+    text-align: center;
+    width: 543px;
+    height: 560px;
+    margin: 0px;
+}
+
+#middleColumn {
+    margin-left: 400px;
+    position: absolute;
+    width: 565px;
+    height: 565px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #rightColumn {
-    margin: auto;
-    width: 560px;
-    height: 560px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    float: right;
+    /* margin: auto; */
+    position: relative;
+    border: 1px solid black;
 }
 
 #erase, #clear {
