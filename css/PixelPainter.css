@@ -96,3 +96,15 @@ td {
     margin-top: 245px;
     background-color: firebrick;
 }
+
+#picturePicker > tr > td >img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#picturePicker {
+    table-layout: fixed;
+    max-width: 200px;
+    display: block;
+}
