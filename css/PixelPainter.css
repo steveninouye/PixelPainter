@@ -117,7 +117,7 @@ td {
     text-align: center;
     font-family: monospace;
     color: rgb(255, 0, 255);
-    width: 225px;
+    width: 240px;
     height: 575px;
     overflow-y: auto;
 }
@@ -127,7 +127,7 @@ td {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f7f7f7; 
     border-radius: 10px;
 }
  
