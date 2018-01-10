@@ -29,6 +29,10 @@ html {
     background-color: #a7d5d5;
     background-image: url('../easeldraw.jpg');
     background-size: 1080px 780px;
+    -ms-background-size: 1080px 780px;
+    -o-background-size: 1080px 780px;
+    -moz-background-size: 1080px 780px;
+    -webkit-background-size: 1080px 780px;
     background-repeat: no-repeat;
     background-position: 40% 0%;
     position: relative;
