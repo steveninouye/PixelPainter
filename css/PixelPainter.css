@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     user-select: none;
     -moz-user-select: none;
@@ -101,17 +106,18 @@ button:hover {
 }
 
 #erase {
-     margin-top: 30px;
+     margin-top: 25px;
      background-color: rgb(0, 121, 186);
 }
 
 #clear {
-    margin-top: 75px;
+    margin-top: 70px;
     background-color: firebrick;
 }
 
 #rightColumn {
     float: right;
+    margin-right: 25px;
     position: sticky;
     font-size: 20px;
     font-weight: bold;
