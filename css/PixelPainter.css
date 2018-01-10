@@ -45,7 +45,6 @@ button:hover {
 }
 
 #leftColumn {
-    /* float: left; */
     display: inline-block;
     position: absolute;
 }
@@ -90,11 +89,11 @@ button:hover {
     width: 542px;
     height: 552px;
     background-position: center; 
-    background-size: contain;
-    -ms-background-size: contain;
-    -o-background-size: contain;
-    -moz-background-size: contain;
-    -webkit-background-size: contain;
+    background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -122,7 +121,7 @@ button:hover {
 #rightColumn {
     float: right;
     position: relative;
-    margin-right: 25px;
+    margin-right: 30px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
