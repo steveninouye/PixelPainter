@@ -79,7 +79,7 @@ colorPickerRowsAndColumns(19,16);
 //executes function and creates picturePicker table
 picPicker();
 //executes function and creates table for middle column
-mainRowsAndColumns(40,40);
+mainRowsAndColumns(70,70);
 //sets original background image
 document.getElementById('middleColumn').style.backgroundImage = "url('pictures/home.png')";
 
