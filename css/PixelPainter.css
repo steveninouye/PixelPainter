@@ -33,7 +33,7 @@ html {
     -o-background-size: 1080px 780px;
     -moz-background-size: 1080px 780px;
     -webkit-background-size: 1080px 780px;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: 40% 0%;
     position: relative;
 }
@@ -45,8 +45,7 @@ button:hover {
 }
 
 #leftColumn {
-    display: inline-block;
-    position: absolute;
+    position: fixed;
 }
 
 #colorPicker {
@@ -76,7 +75,7 @@ button:hover {
     height: 552px;
     border-collapse: collapse;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     text-align: center;
     table-layout: fixed;
 }
@@ -120,8 +119,9 @@ button:hover {
 
 #rightColumn {
     float: right;
-    position: relative;
-    margin-right: 30px;
+    position: inherit;
+    /* margin-right: 30px; */
+    margin: auto;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
