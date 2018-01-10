@@ -1,11 +1,8 @@
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
 body {
     user-select: none;
     -moz-user-select: none;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 h1 {
@@ -45,7 +42,8 @@ button:hover {
 }
 
 #leftColumn {
-    float: left;
+    /* float: left; */
+    display: inline-block;
     position: fixed;
 }
 
@@ -75,14 +73,14 @@ button:hover {
     height: 552px;
     border-collapse: collapse;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     text-align: center;
     table-layout: fixed;
 }
 
 #middleColumn {
     margin-left: 406px;
-    position: absolute;
+    position: fixed;
     width: 540px;
     height: 550px;
     background-position: center; 
@@ -106,8 +104,8 @@ button:hover {
 }
 
 #erase {
-     margin-top: 25px;
-     background-color: rgb(0, 121, 186);
+    margin-top: 25px;
+    background-color: rgb(0, 121, 186);
 }
 
 #clear {
@@ -117,8 +115,8 @@ button:hover {
 
 #rightColumn {
     float: right;
+    position: relative;
     margin-right: 25px;
-    position: sticky;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -150,6 +148,7 @@ button:hover {
 #picturePicker > tr > td > img {
     width: 100%;
     height: auto;
+    border: 1px solid black;
 }
 
 #picturePicker {
