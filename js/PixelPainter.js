@@ -72,7 +72,9 @@ document.getElementById('pixelPainter').appendChild(makeElem('div', 'leftColumn'
 //creates middle column
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'middleColumn', ''));
 //creates right column
-document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', 'PICK A PICTURE'));
+document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
+//creates picturePicker title
+document.getElementById('pixelPainter').appendChild(makeElem('div', 'pictureTitle', 'PICK A PICTURE'));
 
 //executes function and creates colorPicker table
 colorPickerRowsAndColumns(19,16);
