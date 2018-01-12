@@ -69,7 +69,7 @@ function colorPickerRowsAndColumns(x, y){
 //function to create the picture selection table
 function picPicker(){
 //creates a table into the right column
-    document.getElementById('rightColumn').appendChild(makeElem('table','picturePicker', null));
+    document.getElementById('pictureScroll').appendChild(makeElem('table','picturePicker', null));
 //loops through the pictures array
     picturesArray.forEach((element, index) => {
 //adds a new row for each picture in the picturesArray
@@ -86,14 +86,16 @@ document.getElementById('pixelPainter').appendChild(makeElem('div', 'middleColum
 //creates right column
 document.getElementById('pixelPainter').appendChild(makeElem('div', 'rightColumn', ''));
 //creates picturePicker title
-document.getElementById('pixelPainter').appendChild(makeElem('div', 'pictureTitle', 'PICK A PICTURE'));
+document.getElementById('rightColumn').appendChild(makeElem('div', 'pictureTitle', 'PICK A PICTURE'));
+//creates picturePicker div
+document.getElementById('rightColumn').appendChild(makeElem('div', 'pictureScroll', ''));
 
 //executes function and creates colorPicker table
 colorPickerRowsAndColumns(19,16);
 //executes function and creates picturePicker table
 picPicker();
 //executes function and creates table for middle column
-mainRowsAndColumns(70,70);
+mainRowsAndColumns(100,100);
 //sets original background image
 document.getElementById('middleColumn').style.backgroundImage = "url('pictures/home.png')";
 
@@ -152,7 +154,7 @@ for (var h = 0; h < cells.length; h++) {
 
 //       >>>>>>>>>RIGHT COLUMN TABLE<<<<<<<<<<
 //gets all the cells inside of 'picturePicker'
-let images = document.getElementById('picturePicker').getElementsByTagName('img');
+let images = document.getElementById('pictureScroll').getElementsByTagName('img');
 //loops through all of the cells
 for (var t = 0; t < images.length; t++){
 //sets and onlcick functio to each cell
