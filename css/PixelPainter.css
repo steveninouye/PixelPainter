@@ -1,6 +1,11 @@
 body {
     user-select: none;
     -moz-user-select: none;
+    max-width: 1200px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 h1 {
@@ -11,7 +16,6 @@ h1 {
     font-variant: small-caps;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-top: -10px;
     animation-name: example;
     animation-delay: 2s;
     animation-duration: 25s;
@@ -27,22 +31,13 @@ h1 {
 }
 
 html {
-    /* background-color: #a7d5d5;
-    background-image: url('../easeldraw.jpg');
-    background-size: 1080px 780px;
-    -ms-background-size: 1080px 780px;
-    -o-background-size: 1080px 780px;
-    -moz-background-size: 1080px 780px;
-    -webkit-background-size: 1080px 780px;
-    background-repeat: repeat;
-    background-position: 40% 0%;
-    position: relative; */
     background: linear-gradient(to right, #74ebd5, #ACB6E5);
-}
-
-#pixelPainter {
-    max-width: 1200px;
-    margin: 0px auto 0px auto;
+    background-repeat: repeat-y;
+    background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 button:hover {
@@ -52,13 +47,16 @@ button:hover {
 }
 
 #leftColumn {
-    position: fixed;
+    /* position: absolute; */
+    float: left;
+    max-width: 22%;
+    min-width: 252px;
 }
 
 #colorPicker {
     text-align: center;
     border-collapse: collapse;
-    width: 260px;
+    width: 100%;
     height: 400px;
     cursor: pointer;
 }
@@ -76,24 +74,67 @@ button:hover {
     padding: 10px;
 }
 
+#code, #save, #colorIn {
+    margin-top: 5px;
+}
+
+#code {
+    width: 100%;
+    height: 2em;
+    border: 1px solid black;
+}
+
+#save, #colorIn {
+    width: 50%;
+    font-family: monospace;
+    font-size: 15px;
+    position: relative;
+}
+
+#save:hover, #colorIn:hover {
+    color: red;
+}
+
+#erase, #clear {
+    font-size: 20px;
+    float: left;
+    /* position: relative; */
+    margin-top: 5px;
+    width: 50%;
+    height: 2em;
+    font-family: monospace;
+    font-weight: 30px;
+    border: 0.5px solid black;
+}
+
+#erase {
+    background-color: rgb(0, 121, 186);
+}
+
+#clear {
+    background-color: firebrick;
+}
+
 #mainTable {
     width: 542px;
     height: 552px;
     border-collapse: collapse;
     cursor: pointer;
-    position: relative;
+    /* position: absolute; */
     text-align: center;
     table-layout: fixed;
 }
 
 #middleColumn {
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 10px;
-    box-shadow: 0 0 50px rgb(58, 235, 152);
-    position: fixed;
-    left: 0;
-    right: 0;
+    box-shadow: 0 0 50px rgb(255, 116, 220);
+    /* position: absolute; */
+    float: left;
+    /* left: 0;
+    right: 0; */
     margin: auto;
+    max-width: 45%;
     width: 542px;
     height: 552px;
     background-position: center; 
@@ -105,32 +146,18 @@ button:hover {
     background-repeat: no-repeat;
 }
 
-
-#erase, #clear {
-    font-size: 20px;
-    float: left;
-    position: fixed;
-    width: 5em;
-    height: 2em;
-    font-family: monospace;
-    font-weight: 30px;
-    border: 0.5px solid black;
-}
-
-#erase {
-    margin-top: 25px;
-    background-color: rgb(0, 121, 186);
-}
-
-#clear {
-    margin-top: 70px;
-    background-color: firebrick;
-}
-
 #pictureTitle {
-    float: right;
-    position: relative;
-    margin-right: -195px;
+    float: left;
+    /* position: relative; */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    max-width: 20%;
+    width: 240px;
+    margin-right: -5%;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -139,13 +166,21 @@ button:hover {
 }
 
 #rightColumn {
-    float: right;
-    position: relative;
-    margin-top: 30px;
-    width: 220px;
+    float: left;
+    /* position: relative; */
+    /* display: flex;
+    display: -webkit- flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center; */
+    margin-top: 35px;
+    max-width: 18.5%;
+    width: 222px;
     height: 575px;
     overflow-y: auto;
     padding: 5px;
+    border: 3px solid black;
 }
 
 ::-webkit-scrollbar {
@@ -175,4 +210,10 @@ button:hover {
 #picturePicker {
     table-layout: fixed;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    #leftColumn {
+        top: 800px;
+    }
 }
